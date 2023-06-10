@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ChurchAttendanceTable.css";
 
 const ChurchAttendanceTable = ({ branches }) => {
-  const [selectedBranch, setSelectedBranch] = useState("");
+  const [selectedBranch, setSelectedBranch] = useState(branches[0]._id);
   const uniqueDates = Array.from(
     new Set(branches.flatMap((branch) => branch.attendance.map((a) => a.date)))
   );
